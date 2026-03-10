@@ -1,0 +1,23 @@
+# Mac system files
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Local vector database
+vector_db/
+
+# Large datasets
+PapilaDB-PAPILA-9c67b80983805f0f886b068af800ef2b507e7dc0/
+
+# Large chunk outputs
+chunks.jsonl
+
+# Jupyter checkpoint files
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env
