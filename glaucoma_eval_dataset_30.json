@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary goal of treatment in primary open-angle glaucoma (POAG)?",
+    "ground_truth": "The primary goal of POAG treatment is to lower intraocular pressure enough to prevent or slow progressive optic nerve and visual field damage, preserving visual function and quality of life.",
+    "difficulty": "easy",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 2"
+  },
+  {
+    "id": 2,
+    "question": "Name three established risk factors for primary open-angle glaucoma.",
+    "ground_truth": "Established risk factors for POAG include elevated intraocular pressure, older age, family history of glaucoma, African race or Latino/Hispanic ethnicity, thin central cornea, low ocular perfusion pressure, type 2 diabetes mellitus, and myopia.",
+    "difficulty": "easy",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, pages 5 and 9"
+  },
+  {
+    "id": 3,
+    "question": "Is elevated intraocular pressure required to diagnose primary open-angle glaucoma?",
+    "ground_truth": "No. Elevated intraocular pressure is often associated with POAG, but it is not required for diagnosis, and many patients with otherwise characteristic POAG do not have elevated office-hour IOP measurements.",
+    "difficulty": "easy",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 6; ICOGlaucomaGuidelines.pdf, page 3"
+  },
+  {
+    "id": 4,
+    "question": "What are the characteristic structural findings of POAG on optic nerve or retinal nerve fiber layer examination?",
+    "ground_truth": "Characteristic structural findings include optic disc or RNFL abnormalities such as rim narrowing or notching, progressive cupping, diffuse or localized RNFL thinning, disc hemorrhage, neural rim asymmetry, parapapillary atrophy, and thinning of the RNFL or macula on imaging.",
+    "difficulty": "medium",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 6"
+  },
+  {
+    "id": 5,
+    "question": "What visual field patterns are typical of glaucomatous damage in POAG?",
+    "ground_truth": "Typical glaucomatous visual field loss includes defects consistent with RNFL damage, such as a nasal step, arcuate defect, or paracentral depression, often with loss that crosses the horizontal midline asymmetrically between hemifields.",
+    "difficulty": "medium",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 6"
+  },
+  {
+    "id": 6,
+    "question": "How does the AAO PPP classify mild, moderate, and severe POAG?",
+    "ground_truth": "Mild POAG has definite glaucomatous structural abnormalities with a normal standard automated visual field. Moderate POAG has definite structural abnormalities plus visual field abnormalities in one hemifield not within 5 degrees of fixation. Severe POAG has definite structural abnormalities plus visual field abnormalities in both hemifields and/or loss within 5 degrees of fixation in at least one hemifield.",
+    "difficulty": "hard",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, pages 6-7"
+  },
+  {
+    "id": 7,
+    "question": "What is a reasonable initial target intraocular pressure reduction for a patient with POAG?",
+    "ground_truth": "A reasonable initial target is to lower intraocular pressure by about 20% to 30% below baseline, then adjust the target based on disease severity and clinical course.",
+    "difficulty": "easy",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 5"
+  },
+  {
+    "id": 8,
+    "question": "Why should central corneal thickness be measured in patients being evaluated for glaucoma?",
+    "ground_truth": "Central corneal thickness should be measured because it affects interpretation of applanation tonometry; thin corneas can lead to underestimation of IOP and are also associated with higher glaucoma risk.",
+    "difficulty": "medium",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, pages 12-13; EGS_Guidelines_5_English-1.pdf, page 22"
+  },
+  {
+    "id": 9,
+    "question": "Should clinicians use a standard nomogram to correct Goldmann applanation IOP values based on central corneal thickness?",
+    "ground_truth": "No. Although CCT affects tonometry, no standard or validated correction nomogram for applanation IOP has been established, so CCT-adjusted IOP values should not be routinely used.",
+    "difficulty": "medium",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 13; EGS_Guidelines_5_English-1.pdf, page 22"
+  },
+  {
+    "id": 10,
+    "question": "What baseline diagnostic tests are recommended for diagnosing chronic open-angle glaucoma according to NICE?",
+    "ground_truth": "NICE recommends visual field assessment with standard automated perimetry, optic nerve and fundus examination with stereoscopic slit lamp biomicroscopy and pupil dilation, IOP measurement with Goldmann applanation tonometry, gonioscopy, and central corneal thickness measurement.",
+    "difficulty": "medium",
+    "source": "2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, pages 7-8"
+  },
+  {
+    "id": 11,
+    "question": "What tests should be offered before referral for further investigation of chronic open-angle glaucoma and related conditions according to NICE?",
+    "ground_truth": "Before referral, NICE recommends central visual field assessment, optic nerve assessment and fundus examination using stereoscopic slit lamp biomicroscopy with OCT or optic nerve head imaging if available, IOP measurement using Goldmann-type applanation tonometry, and assessment of peripheral anterior chamber configuration and depth using gonioscopy or an alternative such as van Herick or OCT.",
+    "difficulty": "medium",
+    "source": "2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, page 5"
+  },
+  {
+    "id": 12,
+    "question": "Should referral for suspected glaucoma be based only on non-contact tonometry?",
+    "ground_truth": "No. NICE specifically advises not to base a referral decision solely on intraocular pressure measurement using non-contact tonometry.",
+    "difficulty": "easy",
+    "source": "2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, pages 5-6"
+  },
+  {
+    "id": 13,
+    "question": "According to NICE, when should a person be referred for further investigation of chronic open-angle glaucoma and related conditions?",
+    "ground_truth": "After considering repeat measures when appropriate, referral is recommended if there is optic nerve head damage, a visual field defect consistent with glaucoma, or an IOP of 24 mmHg or more measured with Goldmann-type applanation tonometry.",
+    "difficulty": "medium",
+    "source": "2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, page 6"
+  },
+  {
+    "id": 14,
+    "question": "What are the major categories of treatment used to lower intraocular pressure in glaucoma?",
+    "ground_truth": "The major categories are medications, laser therapy, and incisional or other glaucoma surgery.",
+    "difficulty": "easy",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 2; ICOGlaucomaGuidelines.pdf, pages 2-3"
+  },
+  {
+    "id": 15,
+    "question": "What is usually recommended as first-line medical treatment for open-angle glaucoma in the European Glaucoma Society guideline?",
+    "ground_truth": "Prostaglandin analogues are usually recommended as the first-choice medical treatment for open-angle glaucoma because they are the most effective medications for lowering IOP.",
+    "difficulty": "easy",
+    "source": "EGS_Guidelines_5_English-1.pdf, page 23"
+  },
+  {
+    "id": 16,
+    "question": "Can selective laser trabeculoplasty be offered as an initial treatment for open-angle glaucoma?",
+    "ground_truth": "Yes. The European Glaucoma Society states that selective laser trabeculoplasty can be offered as a first-choice treatment for open-angle glaucoma.",
+    "difficulty": "medium",
+    "source": "EGS_Guidelines_5_English-1.pdf, page 24"
+  },
+  {
+    "id": 17,
+    "question": "For newly diagnosed ocular hypertension at risk of visual impairment, what initial treatment does NICE recommend?",
+    "ground_truth": "NICE recommends offering 360-degree selective laser trabeculoplasty as initial treatment for newly diagnosed ocular hypertension with IOP of 24 mmHg or more when the person is at risk of visual impairment within their lifetime.",
+    "difficulty": "medium",
+    "source": "2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, page 9"
+  },
+  {
+    "id": 18,
+    "question": "If selective laser trabeculoplasty is declined, unsuitable, delayed, or insufficient, what medical treatment does NICE recommend for ocular hypertension?",
+    "ground_truth": "NICE recommends offering a generic prostaglandin analogue in those situations, with instruction and observation of correct eye-drop installation technique when drops are first prescribed.",
+    "difficulty": "medium",
+    "source": "2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, pages 9-10"
+  },
+  {
+    "id": 19,
+    "question": "What is the only proven modifiable risk factor for loss of sight from glaucoma according to the ICO guideline?",
+    "ground_truth": "High intraocular pressure is the major and only proven modifiable risk factor for loss of sight from both open- and closed-angle glaucoma.",
+    "difficulty": "easy",
+    "source": "ICOGlaucomaGuidelines.pdf, page 2"
+  },
+  {
+    "id": 20,
+    "question": "How should intraocular pressure be measured during glaucoma assessment according to the ICO checklist?",
+    "ground_truth": "IOP should be measured in each eye before gonioscopy and before dilation, and the time of measurement should be recorded because of diurnal variation.",
+    "difficulty": "medium",
+    "source": "ICOGlaucomaGuidelines.pdf, page 6"
+  },
+  {
+    "id": 21,
+    "question": "Why is gonioscopy important in the evaluation of glaucoma?",
+    "ground_truth": "Gonioscopy is important because it determines whether the angle is open or closed and helps identify angle closure or secondary causes of elevated IOP; imaging cannot replace gonioscopy for full angle assessment.",
+    "difficulty": "medium",
+    "source": "2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, page 7; EGS_Guidelines_5_English-1.pdf, page 22"
+  },
+  {
+    "id": 22,
+    "question": "What does the MIPS POAG quality measure define as treatment success or 'glaucoma treatment not failed'?",
+    "ground_truth": "Treatment has not failed if the most recent IOP was reduced by at least 15% from the pre-intervention level in the affected eye, or in both eyes if both are affected; if not, a documented plan of care is required to meet the measure.",
+    "difficulty": "hard",
+    "source": "2022_Measure_141_MIPSCQM.pdf, pages 1-2"
+  },
+  {
+    "id": 23,
+    "question": "What may be included in a documented glaucoma plan of care under the MIPS POAG quality measure?",
+    "ground_truth": "A plan of care may include rechecking IOP at a specified time, changing therapy, performing additional diagnostic evaluations, monitoring because of patient decisions or health system reasons, and/or referral to a specialist.",
+    "difficulty": "medium",
+    "source": "2022_Measure_141_MIPSCQM.pdf, page 2"
+  },
+  {
+    "id": 24,
+    "question": "Why is lowering intraocular pressure considered central to glaucoma management in major clinical trials?",
+    "ground_truth": "Major randomized trials showed that lowering IOP reduces the risk of developing POAG and slows progression of visual field and optic nerve damage, supporting IOP reduction as the core treatment strategy.",
+    "difficulty": "medium",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, pages 2 and 11"
+  },
+  {
+    "id": 25,
+    "question": "How common is POAG worldwide among adults aged 40 years and older according to the AAO PPP?",
+    "ground_truth": "The prevalence of primary open-angle glaucoma among adults aged 40 years and older was estimated to be about 3.05%.",
+    "difficulty": "easy",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, page 7"
+  },
+  {
+    "id": 26,
+    "question": "Which populations have higher prevalence or risk of POAG according to the AAO PPP?",
+    "ground_truth": "POAG is more prevalent in individuals of African, Afro-Caribbean, and Latino/Hispanic origin, with African Americans having about a threefold higher prevalence than non-Hispanic whites in the United States.",
+    "difficulty": "medium",
+    "source": "1.Primary Open-Angle Glaucoma PPP.pdf, pages 7-8 and 12"
+  },
+  {
+    "id": 27,
+    "question": "What interventions may help improve adherence to glaucoma medical treatment according to the EGS guideline?",
+    "ground_truth": "The EGS guideline suggests that adherence may be improved by simplified regimens, patient education, effective communication such as asking open questions, and reminders such as alarms or messages.",
+    "difficulty": "medium",
+    "source": "EGS_Guidelines_5_English-1.pdf, page 23"
+  },
+  {
+    "id": 28,
+    "question": "Why are non-contact tonometry readings not ideal for diagnosing or monitoring glaucoma in collaborative care pathways?",
+    "ground_truth": "Non-contact tonometry can be inaccurate, tending to underestimate lower IOP and overestimate higher IOP compared with Goldmann applanation tonometry, so its values are not interchangeable with Goldmann measurements and should not be used alone for diagnosis or monitoring.",
+    "difficulty": "hard",
+    "source": "RANZCO-Clinical-Practice-Guidelines-for-the-Collaborative-Care-of-glaucoma-patients_2.pdf, pages 5-6; 2.glaucoma-diagnosis-and-management-pdf-1837689655237.pdf, pages 5-6"
+  },
+  {
+    "id": 29,
+    "question": "What is the recommended first assessment test set in the European Glaucoma Society guideline?",
+    "ground_truth": "The EGS recommends visual acuity and refractive error, slit-lamp examination, gonioscopy, tonometry, visual field testing, clinical assessment of the optic nerve head/RNFL/macula, and CCT measurement; optic disc photography and OCT can also be useful, but glaucoma should not be diagnosed on OCT alone.",
+    "difficulty": "hard",
+    "source": "EGS_Guidelines_5_English-1.pdf, page 19"
+  },
+  {
+    "id": 30,
+    "question": "What tests are recommended for monitoring patients with glaucoma according to the European Glaucoma Society guideline?",
+    "ground_truth": "For monitoring, the EGS recommends visual acuity, visual field testing using the same instrument and strategy over time, clinical examination of the optic disc and RNFL, tonometry, OCT disc/RNFL/macula imaging as useful adjunctive testing, and repeated gonioscopy in some circumstances.",
+    "difficulty": "hard",
+    "source": "EGS_Guidelines_5_English-1.pdf, page 22"
+  }
+]

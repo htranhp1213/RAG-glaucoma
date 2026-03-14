@@ -34,10 +34,17 @@ def build_image_records(image_paths: List[str]):
         base = os.path.basename(p)
         rid = f"mm_image_{i}"
 
+        # Detect eye side from filename
+        eye_side = "right eye (OD)" if "OD" in base else "left eye (OS)" if "OS" in base else "unknown eye"
+
         # Simple generic description (safe for grading)
         desc = (
-            f"Image artifact '{base}': ophthalmology-related image used in the dataset. "
-            f"This record stores the image reference and a searchable text description."
+            # f"Image artifact '{base}': ophthalmology-related image used in the dataset. "
+            # f"This record stores the image reference and a searchable text description."
+            f"Fundus retinal image '{base}' from the PAPILA glaucoma dataset showing the {eye_side}. "
+            f"This ophthalmic image contains the optic disc region used for glaucoma analysis "
+            f"and optic disc / optic cup assessment. The image is a retinal fundus photograph "
+            f"commonly used in glaucoma screening and ophthalmology research."
         )
 
         ids.append(rid)
