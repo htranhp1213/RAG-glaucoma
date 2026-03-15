@@ -21,3 +21,5 @@ chunks.jsonl
 # Virtual environments
 venv/
 .env
+
+node_modules
