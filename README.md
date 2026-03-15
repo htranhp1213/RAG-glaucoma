@@ -216,8 +216,8 @@ Example output:
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ophthorag.git
-cd ophthorag
+git clone https://github.com/htranhp1213/RAG-glaucoma
+cd RAG-glaucoma
 ```
 
 ---
@@ -330,75 +330,100 @@ The system returns:
 
 # Evaluation
 
-The system supports evaluation using **RAGAS metrics**.
+To evaluate the quality of the RAG pipeline, we created a **domain-specific evaluation dataset** consisting of **30 glaucoma-related questions with ground-truth answers** derived from the ophthalmology guideline documents used in the system.
 
-Metrics include:
+The evaluation focuses on two core aspects of RAG performance:
 
-- Faithfulness
-- Context Precision
+1. **Answer Grounding (Faithfulness Proxy)**  
+   Measures how closely the generated answer matches the expected ground-truth answer.
 
-Run evaluation:
+2. **Retrieval Relevance (Context Precision Proxy)**  
+   Measures how relevant the retrieved document chunks are to the input question.
+
+Because of runtime limitations with model-based evaluation tools (RAGAS) in the local environment, we implemented **lightweight proxy metrics** that approximate these evaluation goals using **token-overlap scoring** between:
+
+- generated answer ↔ ground truth  
+- question ↔ retrieved document chunks  
+
+This allows us to evaluate retrieval and generation behavior without requiring external API services.
+
+### Running Evaluation
 
 ```bash
-python evaluate_rag.py
-```
+python run_simple_eval.py
 
-Output files:
-
-```
-eval_results_dense.csv
-eval_summary_dense.json
-```
 
 ---
 
 # Repository Structure
 
 ```
-OphthoRAG
+OphthoRAG/
 │
-├── backend
-│   └── FastAPI server
+├── backend/
+│   └── FastAPI backend server
 │
-├── frontend
-│   └── React QA interface
+├── frontend/
+│   └── React-based QA interface
 │
-├── vector_db
-│   └── Chroma vector store
+├── vector_db/
+│   └── Chroma persistent vector database
 │
-├── ingest_to_chroma.py
-├── add_multimodal_records.py
-├── test_rag_retrieve.py
-├── compare_retrievers.py
+├── sample-images/
+│   └── Example ophthalmology images used for multimodal records
+│
+├── ingestion & preprocessing
+│   ├── 02_ingest_and_chunk.ipynb
+│   ├── ingest_to_chroma.py
+│   ├── add_multimodal_records.py
+│   └── chunks.jsonl
+│
+├── RAG pipeline & utilities
+│   ├── vector_db_utils.py
+│   ├── prompt.py
+│   └── run_rag_eval.py
+│
+├── retrieval experiments
+│   ├── compare_retrievers.py
+│   └── session4_retrieval_compare.csv
+│
+├── evaluation
+│   ├── glaucoma_eval_dataset_30.json
+│   ├── glaucoma_eval_dataset_30.csv
+│   ├── eval_outputs_dense.json
+│   ├── eval_outputs_dense_with_answers.json
+│   ├── run_ragas_metrics.py
+│   ├── run_simple_eval.py
+│   ├── eval_results_dense.csv
+│   └── eval_summary_dense.json
+│
+├── testing scripts
+│   ├── test_rag_retrieve.py
+│   ├── test_vector_ops.py
+│   └── test_prompt.py
 │
 └── README.md
+
 ```
 
 ---
 
 # Limitations
 
-- The system depends on the quality and coverage of the document corpus  
-- LLM responses may hallucinate if insufficient context is retrieved  
-- Current retrieval focuses mainly on **text-based content**
+- Chunk quality – Documents are split into fixed-size chunks during ingestion. Important information can be split across chunks, which may reduce retrieval quality or remove important surrounding context.
+
+- Limited evaluation metrics – Evaluation currently focuses on two metrics (faithfulness and context precision). These provide a basic estimate of answer grounding and retrieval relevance but do not fully measure answer correctness or completeness.
+
+- RAGAS runtime issues – Attempts to run full RAGAS evaluation locally resulted in runtime locking issues when using local models. As a result, lightweight proxy evaluation scripts were used instead for metric estimation.
+
+- Text-only retrieval – The current retrieval pipeline operates primarily on text chunks. Image data is included only as metadata and not yet used for multimodal retrieval.
+
+- Limited corpus coverage – The current document corpus focuses mainly on glaucoma-related literature, so system performance may vary for other ophthalmology topics.
 
 ### Future Work
 
 - Integrate **multimodal ophthalmology datasets**
+- Improve quality of chunks
 - Improve retrieval ranking
-- Add **hybrid dense + sparse retrieval**
+- Try out with more models
 
----
-
-# Citation
-
-If you use OphthoRAG in research, please cite:
-
-```
-@software{ophthorag2026,
-  title = {OphthoRAG: A Retrieval-Augmented Generation System for Ophthalmology Research},
-  author = {Tran, Linh Hy},
-  year = {2026},
-  url = {https://github.com/yourusername/ophthorag}
-}
-```
