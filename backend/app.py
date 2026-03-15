@@ -1,12 +1,11 @@
 from pathlib import Path
+from typing import Optional
 from urllib.parse import quote
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
-
-from prompt import ask_question, RAGConfig
 
 app = FastAPI()
 
@@ -18,21 +17,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Change this to the folder(s) where your real images live.
-# Add more roots if needed.
 ALLOWED_IMAGE_ROOTS = [
-    Path("./PapilaDB-PAPILA-9c67b80983805f0f886b068af800ef2b507e7dc0").resolve(),
+    Path("./RAG-glaucoma/PapilaDB-PAPILA-9c67b80983805f0f886b068af800ef2b507e7dc0/FundusImages").resolve(),
     Path(".").resolve(),
 ]
 
-cfg = RAGConfig()
 
 class AskRequest(BaseModel):
     prompt: str
 
+
 class AskResponse(BaseModel):
     answer: str
-    image_url: str | None = None
+    image_url: Optional[str] = None
 
 
 def is_allowed_image_path(file_path: Path) -> bool:
@@ -73,6 +70,16 @@ def ask_backend(data: AskRequest):
             answer="Please enter a question.",
             image_url=None,
         )
+
+    from prompt import ask_question, RAGConfig
+
+    cfg = RAGConfig(
+        llm_model="google/flan-t5-base",
+        max_new_tokens=200,
+        text_k=3,
+        image_k=2,
+        top_k=5,
+    )
 
     result = ask_question(prompt_text, cfg)
 
