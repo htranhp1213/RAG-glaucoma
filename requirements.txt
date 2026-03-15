@@ -1,0 +1,37 @@
+# Core Python utilities
+pandas
+numpy
+tqdm
+
+# Vector DB
+chromadb
+
+# Embeddings
+sentence-transformers
+
+# Transformers / local models
+transformers
+torch
+accelerate
+
+# LangChain ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+
+# Retrieval
+rank-bm25
+
+# Dataset handling
+datasets
+
+# Backend API
+fastapi
+uvicorn
+
+# Optional evaluation tools (used in some scripts)
+ragas
+
+# HuggingFace utilities
+huggingface-hub
